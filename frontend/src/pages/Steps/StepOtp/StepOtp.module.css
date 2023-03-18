@@ -1,0 +1,26 @@
+.cardWrap {
+  /* border:2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8rem;
+  width: 100%;
+  /* composes: cardWrap from "../../../App.module.css"; */
+}
+
+.actionButtonWrap {
+  margin-top: 2px;
+  /* border:2px solid red;  */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.termsAndService {
+  font-size: 14px;
+  color: #c4c5c5;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 12px;
+}

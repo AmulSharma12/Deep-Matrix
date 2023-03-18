@@ -1,0 +1,21 @@
+# send-otp testing
+POST http://localhost:5500/api/send-otp HTTP/1.1
+Content-Type:  application/json
+
+{
+   
+     "phone": "+916266864667"
+}
+
+
+
+### 
+POST http://localhost:5500/api/verify-otp HTTP/1.1
+Content-Type:  application/json
+
+{
+   
+     "phone": "+916266864667",
+     "otp": 3182,
+     "hash": "894e55900be08a77a34991ed0bb5e9dc711089218c7117808cc338ee01236f80.1678275948147"
+}

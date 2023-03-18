@@ -1,0 +1,22 @@
+.text {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: medium;
+  color: #c5c5c5;
+}
+
+.cardWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8rem;
+
+  /* border:2px solid red; */
+}
+
+.hasInvite {
+  color: #0077ff;
+  font-size: 14px;
+}
+
+/* in componenet we can't style using css module so we have to create the object */
