@@ -31,6 +31,10 @@ const StepAvatar = ({ onNext }) => {
 
   //submit() - making request to the server
   async function submit() {
+    // if field not filled then dont make any server request
+    if (!name || !avatar) return;
+
+    //server request
     setLoading(true);
     try {
       const { data } = await activate({ name, avatar });

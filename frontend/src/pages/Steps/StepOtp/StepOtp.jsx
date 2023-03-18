@@ -14,6 +14,9 @@ const StepOtp = ({ onNext }) => {
   const { phone, hash } = useSelector((state) => state.auth.otp);
   //submit function will make request to the server whether otp is correct or not
   async function submit() {
+    //if field not filled then return dont make any request
+    if (!otp || !phone || !hash) return;
+    //server request
     try {
       //making request to server for verify-otp
       const { data } = await verifyOtp({ otp, phone, hash });
