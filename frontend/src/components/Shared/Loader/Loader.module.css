@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.cardWrap {
+  /* border:2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8rem;
+  width: 100%;
+  /* composes: cardWrap from "../../../App.module.css"; */
+}
+
+/* styling for message span */
+.message {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.spinner {
+  margin-bottom: 20px;
+  animation: spin 0.8s ease-in-out infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

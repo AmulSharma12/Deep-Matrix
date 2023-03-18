@@ -6,11 +6,13 @@ import { useSelector, useDispatch } from "react-redux";
 import { setAvatar } from "../../../store/activateSlice";
 import { activate } from "../../../http/index";
 import { setAuth } from "../../../store/authSlice";
+import Loader from "../../../components/Shared/Loader/Loader";
 
 // StepAvatar module
 const StepAvatar = ({ onNext }) => {
   const { name, avatar } = useSelector((state) => state.activate);
   const [profile, setProfile] = useState("/images/default.jpg");
+  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
 
   //captureImage function
@@ -29,17 +31,23 @@ const StepAvatar = ({ onNext }) => {
 
   //submit() - making request to the server
   async function submit() {
+    setLoading(true);
     try {
       const { data } = await activate({ name, avatar });
       if (data.auth) {
         //updating in the store
         dispatch(setAuth(data));
       }
-      console.log(data);
     } catch (err) {
       console.log("Error " + err);
+    } finally {
+      setLoading(false);
     }
   }
+
+  // conditional rendering - loading true loader will render otherwise not
+  if (loading) return <Loader message="Activation in progress..." />;
+
   return (
     <>
       <div className={styles.cardWrap}>

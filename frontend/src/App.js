@@ -13,6 +13,7 @@ import Activate from "./pages/Activate/Activate";
 import Rooms from "./pages/Rooms/Rooms";
 import { useSelector } from "react-redux";
 import { useLoadingWithRefresh } from "./hooks/useLoadingWithRefresh";
+import Loader from "./components/Shared/Loader/Loader";
 
 // const isAuth = false;
 // const user = {
@@ -20,12 +21,11 @@ import { useLoadingWithRefresh } from "./hooks/useLoadingWithRefresh";
 // };
 
 function App() {
-  // return <Loader />;
   //call refresh endpoint -using custom hooks
   //Auto login - loading state and making refresh request
   const { loading } = useLoadingWithRefresh();
   return loading ? (
-    "Loading..."
+    <Loader message="Loading, please wait!" />
   ) : (
     <>
       <Router>
