@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { setAuth } from "../../../store/authSlice";
 import { logout } from "../../../http";
 
-
 // Navbar component
 const Navbar = () => {
   //brand style
@@ -35,10 +34,9 @@ const Navbar = () => {
     }
   }
 
-  // Accessing isAuth from useSelector and based on their value will be rendering    
+  // Accessing isAuth from useSelector and based on their value will be rendering
   // happens iAuth true then logout visible otherwise not
-  const {isAuth} = useSelector(state=> state.auth);
-  
+  const { isAuth, user } = useSelector((state) => state.auth);
 
   return (
     <nav className={`${styles.navbar} container`}>
@@ -47,11 +45,26 @@ const Navbar = () => {
         <span style={logoText}>Deep Matrix</span>
       </Link>
 
-      {/* Logout button */}
-      {isAuth && (
-        <button className={styles.button} onClick={logoutUser}>
-          Logout
-        </button>
+      {/* profile image and logout button */}
+      {user && user.name && user.avatar && (
+        <div className={styles.navRight}>
+          {/* profile name */}
+          <h3>{user.name}</h3>
+
+          {/* profile image */}
+          <Link to="/">
+            <img
+              className={styles.profileImage}
+              src={user.avatar}
+              alt="avatar"
+            />
+          </Link>
+
+          {/* logout button */}
+          <button className={styles.logoutButton} onClick={logoutUser}>
+            <img src="/images/logout.png" width="40px" height="30px"></img>
+          </button>
+        </div>
       )}
     </nav>
   );

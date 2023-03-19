@@ -5,3 +5,27 @@
   align-items: center;
   height: 2rem;
 }
+
+.logoutButton {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileImage {
+  width: 40px;
+  height: 35px;
+  border-radius: 50%;
+  /* object-fit: cover; */
+  background-size: cover;
+  border: 3px solid #0077ff;
+  margin: 0 20px;
+  margin-right: 5px;
+}
