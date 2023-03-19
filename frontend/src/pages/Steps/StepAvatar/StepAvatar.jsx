@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./StepAvatar.module.css";
 import Card from "../../../components/Shared/Card/Card";
 import Button from "../../../components/Shared/Button/Button";
@@ -13,6 +13,7 @@ const StepAvatar = ({ onNext }) => {
   const { name, avatar } = useSelector((state) => state.activate);
   const [profile, setProfile] = useState("/images/default.jpg");
   const [loading, setLoading] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const dispatch = useDispatch();
 
   //captureImage function
@@ -40,7 +41,7 @@ const StepAvatar = ({ onNext }) => {
       const { data } = await activate({ name, avatar });
       if (data.auth) {
         //updating in the store
-        dispatch(setAuth(data));
+        if (!mounted) dispatch(setAuth(data));
       }
     } catch (err) {
       console.log("Error " + err);
@@ -48,6 +49,14 @@ const StepAvatar = ({ onNext }) => {
       setLoading(false);
     }
   }
+
+  // for memory leak issues we clear up using clear function with useEffect
+  useEffect(() => {
+    // returning arrow function
+    return () => {
+      setMounted(true);
+    };
+  }, []);
 
   // conditional rendering - loading true loader will render otherwise not
   if (loading) return <Loader message="Activation in progress..." />;
