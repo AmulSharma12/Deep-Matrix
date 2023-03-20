@@ -32,7 +32,7 @@ img {
 
 /* applying css */
 body {
-  background: #121212;
+  background-image: linear-gradient(to right, #101010, #2b4162);
   color: #fff;
   font-family: "Nunito", sans-serif;
 }

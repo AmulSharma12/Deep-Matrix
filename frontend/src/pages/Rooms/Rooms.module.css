@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+.roomsContainer {
+  /* border: 1px solid red; */
+  width: 90vw;
+
+  margin: 0px 5vw;
+  height: 100vh;
+  background-image: linear-gradient(to right, #121212, #2b4161);
+}
+
+.roomsHeader {
+  /* border: 2px solid red; */
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left {
+  /* border: 1px solid blue; */
+  width: 40vw;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.spanText {
+  /* border: 2px solid red; */
+  width: 30%;
+  font-weight: bold;
+  /* color: rgb(212, 157, 55); */
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.inputWrapper {
+  /* border: 2px solid red; */
+  height: 4vh;
+  width: 15vw;
+  margin: 0 5px;
+  padding: 0 2px;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(to right, #121212, #5f9def);
+  border-radius: 50px;
+}
+
+.searchImage {
+  /* border: 2px solid red; */
+  width: 40px;
+  height: 35px;
+}
+
+.inputSearchField {
+  margin-left: 2px;
+  width: 120%;
+  height: 60%;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  padding: 5px;
+  text-align: center;
+  /* font-weight: bold; */
+  font-size: medium;
+  font-family: "Montserrat", sans-serif;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+.roomsHeader {
+  position: relative;
+}
+
+.roomsHeader::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: #0077ff;
+}
+
+.right {
+  /* border: 1px solid yellow; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.startRoomButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #EC9F05;
+  padding: 5px 20px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  margin: 0 10px;
+  cursor: pointer;
+  padding: 0 10px;
+  color: #fff;
+  height: 4vh;
+  transition: all 0.2s ease-in-out;
+  font-weight: bold;
+}
+
+.startRoomButton:hover {
+  background: 
+  #b57104e2;
+}
+
+.roomImage {
+  margin-right: 10px;
+}
