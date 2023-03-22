@@ -119,3 +119,12 @@
 .roomImage {
   margin-right: 10px;
 }
+
+
+
+.roomList{
+  margin-top: 4vh;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:20px;
+}
