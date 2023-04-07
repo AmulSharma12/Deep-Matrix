@@ -1,17 +1,17 @@
 .card {
-  border: 2px solid red;
+  border: 1px solid #fff;
   background-image: linear-gradient(to right, #121212, #2b4162);
   /* background: white; */
   padding: 20px;
   border-radius: 10px;
   cursor: pointer;
-  height: 20vh;
+  height: 30vh;
   display: flex;
   flex-direction: column;
 }
+
 .topic {
-    height: 10vh;
-  
+  height: 10vh;
 }
 
 .speakers {
@@ -59,13 +59,12 @@
 }
 
 .peopleCount {
-    /* border: 2px solid red; */
-    text-align: right;
-    float: bottom;
+  /* border: 2px solid red; */
+  text-align: right;
+  float: bottom;
 }
 
-
-.peopleCount span{
-    font-weight: bold;
-    margin-right: 10px;
+.peopleCount span {
+  font-weight: bold;
+  margin-right: 10px;
 }

@@ -4,7 +4,7 @@
   width: 90vw;
 
   margin: 0px 5vw;
-  height: 100vh;
+  height: 100%;
   background-image: linear-gradient(to right, #121212, #2b4161);
 }
 
@@ -97,7 +97,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #EC9F05;
+  background: #ec9f05;
   padding: 5px 20px;
   border-radius: 20px;
   outline: none;
@@ -112,19 +112,16 @@
 }
 
 .startRoomButton:hover {
-  background: 
-  #b57104e2;
+  background: #b57104e2;
 }
 
 .roomImage {
   margin-right: 10px;
 }
 
-
-
-.roomList{
+.roomList {
   margin-top: 4vh;
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap:20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }

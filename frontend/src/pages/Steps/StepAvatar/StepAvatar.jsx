@@ -50,7 +50,7 @@ const StepAvatar = ({ onNext }) => {
     }
   }
 
-  // for memory leak issues we clear up using clear function with useEffect
+  // for memory leak issues we clear up using clear function with useEffectx  
   useEffect(() => {
     // returning arrow function
     return () => {

@@ -97,9 +97,6 @@ const ProtectedRoute = ({ children, redirectTo, activateRoute }) => {
   ) : (
     children
   );
-
-  if (!isAuth) {
-  }
 };
 
 export default App;
