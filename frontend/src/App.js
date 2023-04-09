@@ -11,6 +11,7 @@ import Home from "./pages/Home/Home";
 import Authenticate from "./pages/Authenticate/Authenticate";
 import Activate from "./pages/Activate/Activate";
 import Rooms from "./pages/Rooms/Rooms";
+import Room from "./pages/Room/Room";
 import { useSelector } from "react-redux";
 import { useLoadingWithRefresh } from "./hooks/useLoadingWithRefresh";
 import Loader from "./components/Shared/Loader/Loader";
@@ -60,6 +61,16 @@ function App() {
             element={
               <ProtectedRoute redirectTo="/" activateRoute="/activate">
                 <Rooms />
+              </ProtectedRoute>
+            }
+          ></Route>
+
+          {/* registring  single room route /room/jslkdjflklkjsdfjlk */}
+          <Route
+            path="/room/:id"
+            element={
+              <ProtectedRoute redirectTo="/" activateRoute="/activate">
+                <Room />
               </ProtectedRoute>
             }
           ></Route>
