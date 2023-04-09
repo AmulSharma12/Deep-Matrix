@@ -15,6 +15,7 @@ export const verifyOtp = (data) => api.post("/api/verify-otp", data);
 export const activate = (data) => api.post("/api/activate", data);
 export const logout = () => api.post("/api/logout");
 export const createRoom = (data) => api.post("/api/rooms", data);
+export const getAllRooms  = () => api.get('/api/rooms');
 
 // when access token expires then we have refresh the access token
 // Interceptors  - sit in between the request and response

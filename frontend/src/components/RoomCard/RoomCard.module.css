@@ -5,7 +5,7 @@
   padding: 20px;
   border-radius: 10px;
   cursor: pointer;
-  height: 30vh;
+  height: 28vh;
   display: flex;
   flex-direction: column;
 }
@@ -67,4 +67,18 @@
 .peopleCount span {
   font-weight: bold;
   margin-right: 10px;
+}
+
+.singleSpeaker{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.singleSpeaker .avatars img{
+   position: initial;
+}
+
+.singleSpeaker .names{
+  margin-left:20px;
 }

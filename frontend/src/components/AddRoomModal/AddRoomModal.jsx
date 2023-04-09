@@ -17,11 +17,11 @@ const AddRoomModal = ({ onClose }) => {
 
       // server request for creating room
       const { data } = await create({ topic, roomType });
-      console.log("from client ", data);
+      // console.log("from client ", data);
 
       //redirecting to single room
       navigate(`/room/${data.id}`);
-      console.log(data);
+      // console.log(data);
     } catch (err) {
       console.log(err.message);
     }

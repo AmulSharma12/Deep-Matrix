@@ -12,6 +12,15 @@ class RoomService {
 
     return room;
   }
+
+  //query for getting all the rooms using types of room
+  async getAllRooms(types) {
+    const rooms = await RoomModel.find({ roomType: { $in: types } })
+      .populate("speakers")
+      .populate("ownerId")
+      .exec();
+    return rooms;
+  }
 }
 
 module.exports = new RoomService();

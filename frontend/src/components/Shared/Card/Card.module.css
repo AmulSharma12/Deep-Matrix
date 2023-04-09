@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap");
 .card {
-  width: 350px;
-  max-width: 80%;
-  height: 240px;
+  width: 30vw;
+  /* max-width: 80%; */
+  height: 40vh;
   background-image: linear-gradient(to right, #121212, #2b4162);
   border: 2px solid white;
   padding: 30px;
